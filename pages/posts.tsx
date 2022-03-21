@@ -49,7 +49,7 @@ const PostsPage: PageWithSkeleton<PageProps> = props => {
         </div>
       ))}
       <div className="mt-4">
-        <Link href="/" shallow>
+        <Link href="/">
           <a className="text-blue-500 underline hover:no-underline">Go back</a>
         </Link>
       </div>

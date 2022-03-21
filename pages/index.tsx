@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       </Head>
       <h1 className="text-2xl font-bold">It works!</h1>
       <div className="mt-4">
-        <Link href="/posts" shallow>
+        <Link href="/posts">
           <a className="text-blue-500 underline hover:no-underline">
             Go to posts
           </a>
