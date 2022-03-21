@@ -7,7 +7,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   const Skeleton = (Component as PageWithSkeleton).skeleton
 
   return (
-    <Suspense fallback={!!Skeleton && <Skeleton />}>
+    <Suspense
+      fallback={
+        !!Skeleton && pageProps.__PAGE_SKELETON_FALLBACK__ && <Skeleton />
+      }
+    >
       <Component {...pageProps} />
     </Suspense>
   )
