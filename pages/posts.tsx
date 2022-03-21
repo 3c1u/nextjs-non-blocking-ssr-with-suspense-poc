@@ -33,6 +33,7 @@ const PostsPageSkeleton: NextPage = () => {
 }
 
 const PostsPage: PageWithSkeleton<PageProps> = props => {
+  // SWRのSuspenseモードを使用
   const { data: posts } = useSWR<Posts>(
     '/api/posts',
     () => fetch('/api/posts').then(res => res.json()),
